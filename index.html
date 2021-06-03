@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            background:red;
+        }
+        .two{
+            background:blue;
+        }
+        .three{
+            background:black;
+        }
+        .four{
+            background:orange;
+        }
+        .bg{
+            color:white;
+        }
+        @media screen and (min-width:1200px){
+         .bg{  
+            display:flex;
+            text-align: center;
+            color:white;
+         }
+         .one{
+             width:25%;
+             height:60px;
+            line-height: 60px;
+            text-align: center;
+         }
+         .bg2{
+             width:75%;
+             display:flex;
+         }
+         .bg2>div{
+            width:100%;
+            height:60px;
+            line-height: 60px;
+            text-align: center;
+            float:left;   
+        }
+        }
+        @media screen and (max-width:1200px) and (min-width:992px){
+         .bg2{  
+            display:flex;
+            text-align: center;
+            color:white;
+         }
+         .one{
+            width:100%;
+            height:60px;
+            line-height: 60px;
+            text-align: center;
+         }
+         .two,.three,.four{
+            width:100%;
+            height:60px;
+            line-height: 60px;
+            text-align: center;
+            float:left;   
+        }    
+        }
+        @media screen and (max-width:992px) and (min-width:768px){
+            .one,.two{
+            width:50%;
+            height:60px;
+            line-height: 60px;
+            text-align: center;
+            float:left;   
+            }
+            .three,.four{
+            width:50%;
+            height:60px;
+            line-height: 60px;
+            text-align: center;
+            float:left;   
+            }
+
+        }
+        @media screen and (max-width:768px){
+         .bg{
+            text-align: center;
+            color:white;
+        } 
+        .bg>div{
+            height:60px;
+            line-height: 60px;
+            text-align: center;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+    <div class="one">1</div>
+    <div class="bg2">
+    <div class="two">2</div>
+    <div class="three">3</div>
+    <div class="four">4</div>
+    </div>
+    </div>
+</body>
+</html>
